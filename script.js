@@ -55,10 +55,36 @@ keyboardFields(passField, submitBtn);  // Enter button event handler, this funct
 
 submitBtn.addEventListener('click', function(){
     
-    loginArea.style.display = 'none';
-    transactionArea.style.display = 'block';
- 
-    document.body.style.backgroundColor = '#778899';
+    if(emailField.value==="")
+        {
+            emailField.style.border="1px solid red";
+            emailField.style.outline="1px solid red";
+        }
+        else if(passField.value ==="")
+        {
+            passField.style.border="1px solid red";
+            passField.style.outline="1px solid red";
+
+        }
+        else
+        { 
+            loginArea.style.display = 'none';
+            transactionArea.style.display = 'block';
+             
+            document.body.style.backgroundColor = '#778899';
+            
+        }
+
+        if(emailField.value != "")
+        {
+            emailField.style.border="1px solid lightblue";
+            emailField.style.outline="1px solid lightblue";
+        }
+        if(passField.value != "")
+        {
+            passField.style.border="1px solid lightblue";
+            passField.style.outline="1px solid lightblue";
+        }
 
 })
 
